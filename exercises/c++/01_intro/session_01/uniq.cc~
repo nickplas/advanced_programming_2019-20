@@ -1,0 +1,37 @@
+#include<iostream>
+int main(){
+  int i=0;
+  int j;
+  int k;
+  int h;
+  std::string a[100]; 
+  //std::string line;
+  // while(std::getline(std::cin,line)){
+  //  a[i]=line;
+  //  i+=1;
+  //   }
+   for(std::string line; std::getline(std::cin,line);){
+    a[i]=line;
+    i+=1;
+  }
+  std::cout<<"The words are: \n";
+  for(j=0; j<i; ++j){
+    if(a[j]==" "){
+      continue;
+    }
+    int c=1;
+    for(k=j+1; k<i; ++k){
+      if(a[k]==" "){
+	continue;
+      }
+      if(a[j]==a[k]){
+        c+=1;
+        a[k]=" ";
+      }
+      
+     
+    }
+    std::cout<<a[j]<<" "<<c<< std::endl; //prints the words with the counter      
+      c=1;
+}
+}

@@ -1,0 +1,42 @@
+#include<iostream>
+int get_int(){
+  int i;
+  bool is_int=false;
+  while (is_int==false){ 
+    std::cout<< "Write an integer\n";
+    if (!std::cin>>i){
+      std::cout<< "Is not an integer\n";
+      std::cin.clear();
+      std::cin.ignore();
+  }else{
+      is_int=true;
+  }
+  }
+  return i;
+}
+
+int get_double(){
+  double i;
+  bool is_double=false;
+  while (is_double==false){ 
+    std::cout<< "Write a double\n";
+    if (!std::cin>>i){
+      std::cout<< "Is not a double\n";
+      std::cin.clear();
+      std::cin.ignore();
+  }else{
+      is_double=true;
+  }
+  }
+  return i;
+}
+
+
+int main () {
+  int i;
+  double j;
+  i=get_int();
+  std::cout<< i << " is the number\n";
+  j=get_double();
+  std::cout<<j<< " is the number\n";
+}
